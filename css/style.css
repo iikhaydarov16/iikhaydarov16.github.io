@@ -202,5 +202,24 @@ textarea:focus {
 }
 
 .swiper-banners .swiper-pagination-bullet-active{
-    
+    opacity:unset;
+    background: #303030;
+}
+
+.swiper-banners .product-attributes{
+    position: absolute;
+    top: 56px;
+    left: 48px;
+    display: flex;
+    gap: 8px;
+}
+
+.product-attributes .attribute{
+    border-radius: 53px;
+    padding: 10px 14px;
+    background: linear-gradient(162deg, rgba(0,119,178,1) 0%, rgba(0,119,178,0) 100%);
+    font-family: var(--font-family);    
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #303030; 
 }

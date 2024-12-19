@@ -25,36 +25,48 @@ textarea:focus {
 }
 
 @font-face {
-    font-family: 'HelveticaNeueCyr';
-    src: url("/fonts/HelveticaNeueCyr-Medium.woff2") format('woff2');
+    font-family: 'Montserrat-Bold';
+    src: url("/fonts/Montserrat-Bold.woff2") format('woff2');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url("/fonts/Montserrat-SemiBold.woff2") format('woff2');
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url("/fonts/Montserrat-Medium.woff2") format('woff2');
     font-display: swap;
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'HelveticaNeueCyr-Roman';
-    src: url("/fonts/HelveticaNeueCyr-Roman.woff2") format('woff2');
+    font-family: 'Manrope-Bold';
+    src: url("/fonts/Manrope-Bold.woff2") format('woff2');
     font-display: swap;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Helvetica Neue';
-    src: url("/fonts/HelveticaNeue-Medium.woff2") format('woff2');
+    font-family: 'Manrope-Semibold';
+    src: url("/fonts/Manrope-Semibold.woff2") format('woff2');
     font-display: swap;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'HelveticaNeue-Regular';
-    src: url("/fonts/HelveticaNeue-Regular.woff2") format('woff2');
-    font-display: swap;
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Inter';
-    src: url("/fonts/Inter-Medium.woff2") format('woff2');
+    font-family: 'Manrope-Medium';
+    src: url("/fonts/Manrope-Medium.woff2") format('woff2');
     font-display: swap;
     font-weight: 500;
     font-style: normal;
@@ -68,16 +80,12 @@ textarea:focus {
 }
 
 :root {
-    --bg: #ffffff;
-    --first: #335D98;
-    --second: #C9534D;
-    --third: #507564;
-
-    --font-family: "HelveticaNeueCyr", sans-serif;
-    --second-family: "Helvetica Neue", sans-serif;
-    --third-family: "Inter", sans-serif;
-    --fourth-family: "HelveticaNeueCyr-Roman", sans-serif;
-    --fifth-family: "Inter", sans-serif;
+    --font-family: "Montserrat-SemiBold", sans-serif;
+    --second-family: "Montserrat-Bold'", sans-serif;
+    --third-family: "Montserrat-Medium'", sans-serif;
+    --fourth-family: "Manrope-Bold", sans-serif;
+    --fifth-family: "Manrope-Semibold", sans-serif;
+    --six-family: "Manrope-Medium", sans-serif;
 
     --container-width: 1440px; 
     --container-offset: 15px;

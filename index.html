@@ -6,331 +6,44 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-    <title>Oilan university</title>
+    <title>Trade-comfort</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="page__body">
-    <div class="container d-flex">
-        <div class="sidebar">
-            <div class="sidebar-header">
-            <a class="logo" href="/#">
-                <img src="images/logo.svg" alt="Oilan university Logo" width="211" height="88">
-            </a>
-            <nav class="nav">
-                <ul class="list-reset nav__list">
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">Институт</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">Дистанционные программы</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">Поступающим</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">Лицензия</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">Сведения об образовательной организации</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#" class="nav__link">Контакты</a>
-                  </li>
-                </ul>
-            </nav>
-            <div class="visually-impaired">
-                <a href="#">Версия для слабовидящих</a>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="" alt="">
             </div>
+            <button class="catalog-btn">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7H15" stroke="#303030" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M4 1H12" stroke="#303030" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M4 13H12" stroke="#303030" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <span>Каталог</span>
+            </button>
+            <div class="search-form">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="5" stroke="#303030" stroke-width="1.5" />
+                    <path d="M12.9697 14.5303C13.2626 14.8232 13.7374 14.8232 14.0303 14.5303C14.3232 14.2374 14.3232 13.7626 14.0303 13.4697L12.9697 14.5303ZM9.96967 11.5303L12.9697 14.5303L14.0303 13.4697L11.0303 10.4697L9.96967 11.5303Z" fill="#303030" />
+                  </svg>
+                <input type="text" id="search-query" placeholder="Поиск" />
             </div>
-            <div class="contact-info">
-                <div class="phone">
-                    <a href="tel:88001111111" class="phone__number">8 (800) 111-11-11</a>
-                    <span class="phone__text">Звонок по России<br> бесплатный</span>
-                </div>
-                <div class="schedule">
-                    <span class="working-hours">Пн-Вс 8:30-20:30</span>
-                    <span class="schedule__text">по Москве</span>
-                </div>
+            <div class="header__nav">
+                <nav class="nav">
+                    <div class="nav-item">
+                        <a href=""></a>
+                    </div>
+                    <div class="nav-item"></div>
+                    <div class="nav-item"></div>
+                    <div class="nav-item"></div>
+                    <div class="nav-item"></div>
+                    <div class="nav-item"></div>
+                    <div class="nav-item"></div>
+                </nav>
             </div>
-            <div class="sidebar-footer">
-                <div class="e-mail">
-                    <a href="mailto:Oilanuniversity@gmail.com">Oilanuniversity@gmail.com</a>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-link">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 6.8C14.49 8.38 13.84 12.22 13.51 13.99C13.37 14.74 13.09 14.99 12.83 15.02C12.25 15.07 11.81 14.64 11.25 14.27C10.37 13.69 9.87 13.33 9.02 12.77C8.03 12.12 8.67 11.76 9.24 11.18C9.39 11.03 11.95 8.7 12 8.49C12.0069 8.45819 12.006 8.42517 11.9973 8.3938C11.9886 8.36244 11.9724 8.33367 11.95 8.31C11.89 8.26 11.81 8.28 11.74 8.29C11.65 8.31 10.25 9.24 7.52 11.08C7.12 11.35 6.76 11.49 6.44 11.48C6.08 11.47 5.4 11.28 4.89 11.11C4.26 10.91 3.77 10.8 3.81 10.45C3.83 10.27 4.08 10.09 4.55 9.9C7.47 8.63 9.41 7.79 10.38 7.39C13.16 6.23 13.73 6.03 14.11 6.03C14.19 6.03 14.38 6.05 14.5 6.15C14.6 6.23 14.63 6.34 14.64 6.42C14.63 6.48 14.65 6.66 14.64 6.8Z" fill="#335D98" />
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.073 0H6.937C1.333 0 0 1.333 0 6.927V13.063C0 18.666 1.323 20 6.927 20H13.063C18.666 20 20 18.677 20 13.073V6.937C20 1.333 18.677 0 13.073 0ZM16.146 14.27H14.687C14.135 14.27 13.969 13.823 12.979 12.833C12.115 12 11.75 11.896 11.531 11.896C11.229 11.896 11.146 11.979 11.146 12.396V13.708C11.146 14.063 11.031 14.271 10.104 14.271C9.20434 14.2105 8.33192 13.9372 7.5586 13.4735C6.78527 13.0098 6.13317 12.3691 5.656 11.604C4.52317 10.194 3.73494 8.53913 3.354 6.771C3.354 6.552 3.437 6.354 3.854 6.354H5.312C5.687 6.354 5.822 6.521 5.969 6.906C6.677 8.99 7.885 10.802 8.375 10.802C8.563 10.802 8.645 10.719 8.645 10.25V8.104C8.583 7.125 8.063 7.042 8.063 6.688C8.06968 6.59463 8.11247 6.50753 8.18229 6.44518C8.25211 6.38283 8.34347 6.35012 8.437 6.354H10.729C11.042 6.354 11.146 6.51 11.146 6.885V9.781C11.146 10.094 11.281 10.198 11.375 10.198C11.563 10.198 11.708 10.094 12.052 9.75C12.7909 8.84895 13.3945 7.84508 13.844 6.77C13.8899 6.64086 13.9769 6.5303 14.0915 6.45519C14.2062 6.38008 14.3423 6.34454 14.479 6.354H15.938C16.375 6.354 16.468 6.573 16.375 6.885C15.8445 8.07343 15.1881 9.20155 14.417 10.25C14.26 10.49 14.197 10.615 14.417 10.896C14.562 11.115 15.073 11.542 15.417 11.948C15.9169 12.4466 16.332 13.0236 16.646 13.656C16.771 14.062 16.562 14.27 16.146 14.27Z" fill="#335D98" />
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 16.9997L2 18L3 14.5C2.5 13.6667 1.9 11.2 1.5 10C4 -2 10.5 1.49997 13.5 1.49997C16.5 1.49997 21 9.49966 17 15.4997C13.8 20.2997 8.33333 18.4997 6 16.9997Z" fill="#335D98" />
-                            <path d="M10.1906 0C4.77797 0 0.381161 4.35107 0.381161 9.74557C0.379542 11.5211 0.862834 13.2632 1.77875 14.7835L0 20L5.43827 18.2722C6.89198 19.0796 8.52822 19.5002 10.1906 19.4936C15.6032 19.4936 20 15.1426 20 9.74807C20 4.35357 15.6032 0 10.1906 0ZM10.2162 17.9388C8.60017 17.9492 7.01726 17.4799 5.66734 16.5902L2.49038 17.6079L3.53247 14.5547C2.50942 13.1605 1.95752 11.4757 1.95713 9.74557C1.95713 5.21652 5.64168 1.5523 10.1906 1.5523C14.7395 1.5523 18.4497 5.21652 18.4747 9.74557C18.4747 14.2746 14.7645 17.9388 10.2162 17.9388Z" fill="#335D98" />
-                            <path d="M14.8462 12.5575C14.6389 13.099 13.6255 13.6161 13.1828 13.6652C12.74 13.7144 12.7413 14.0102 10.2212 13.099C7.72609 12.1634 6.14328 9.77583 6.01341 9.60364C5.88545 9.4557 5 8.34799 5 7.21542C5 6.08285 5.62314 5.51778 5.8573 5.29527C6.09146 5.07276 6.35057 5 6.50668 5C6.66278 5 6.84448 5.02486 6.97436 5.02486C7.12982 5.02486 7.31216 4.95089 7.51945 5.41835C7.72673 5.88581 8.2232 7.01898 8.2731 7.14206C8.32301 7.26514 8.37675 7.38822 8.29934 7.53555C8.23134 7.67206 8.15308 7.80376 8.06518 7.92965C7.93722 8.05091 7.80543 8.22491 7.70178 8.32314C7.57383 8.4444 7.44203 8.56929 7.5975 8.7912C7.75296 9.01311 8.24687 9.77583 8.9743 10.3912C9.90966 11.1794 10.7151 11.425 10.9487 11.548C11.1822 11.6711 11.3383 11.6469 11.4682 11.4989C11.6243 11.3516 12.0919 10.832 12.2474 10.5895C12.4035 10.3676 12.5852 10.3924 12.7931 10.4682C13.0279 10.5392 14.2205 11.1061 14.4828 11.2273C14.7163 11.3486 14.8986 11.3995 14.9505 11.4977C15.0285 11.548 15.0285 12.0155 14.8462 12.5575Z" fill="white" />
-                        </svg>
-                    </a>
-                </div>
-                <button class="feedback-btn btn-reset">Заказать звонок 
-                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="8.5" cy="8.5" r="8.5" fill="white" />
-                        <path d="M7.814 5H9.242V7.828H12.056V9.256H9.242V12.084H7.814V9.256H5V7.828H7.814V5Z" fill="#335D98" />
-                        </svg>
-                </button>
-            </div>
-        </div>
-        <div class="content">
-            <header class="header">
-                    <form id="search-form" class="search-form" action="/search" method="get">
-                        <div class="search-form__input">
-                            <input type="text" name="query" placeholder="Поиск">
-                        </div>
-                    </form>
-            </header>
-            <main class="main">
-                <section class="banner">
-                    <img src="images/main-banner.svg" alt="" class="banner-img">
-                    <h1>Oilan university</h1>
-                    <h3>Университет Интегративной психологии и Психотерапии</h3>
-                    <div class="stock-wrapper">
-                        <div class="stock-wrapper__title">
-                            60%
-                        </div>
-                        <div class="stock-wrapper__description">
-                            скидки до 12 сентября
-                        </div>
-                        <button class="callback-btn btn-reset">Заказать звонок 
-                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="8.5" cy="8.5" r="8.5" fill="white" />
-                                <path d="M7.814 5H9.242V7.828H12.056V9.256H9.242V12.084H7.814V9.256H5V7.828H7.814V5Z" fill="#C9534D" />
-                              </svg>
-                        </button>
-                    </div>
-                </section>
-                <section class="overview-topics">
-                    <p>На наших программах и мероприятиях мы даем людям инструменты, которые позволяют им создать свое счастливое настоящее и обусловить будущее, которого они всегда хотели.</p>
-                    <h2>К нам<span class="icon-text"><svg width="63" height="39" viewBox="0 0 63 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.2" d="M57.8274 24.4378C61.0105 21.9178 63 18.4694 63 14.6894C63 6.86423 54.5116 0.431641 44.1001 0.431641C39.1928 0.431641 34.6834 1.89058 31.3013 4.1453C37.9328 7.46107 42.3759 13.4294 42.3759 20.1273C42.3759 23.1778 41.5138 26.0294 39.9223 28.5493C41.2486 28.7483 42.6412 28.8809 44.1001 28.8809C46.4212 28.8809 48.6096 28.5493 50.6653 27.9525L58.4905 32.9261C59.3526 33.523 60.5463 32.6609 60.2148 31.5998L57.8274 24.4378Z" fill="white" />
-                        <path d="M18.8999 5.93604C8.48836 5.93604 0 12.3023 0 20.1938C0 23.9738 1.98946 27.3559 5.10628 29.9422L2.78524 37.2369C2.45367 38.2316 3.58103 39.0937 4.50944 38.5632L12.3347 33.5232C14.3904 34.12 16.5788 34.4516 18.8999 34.4516C29.3114 34.4516 37.7997 28.0854 37.7997 20.1938C37.7997 12.3023 29.3114 5.93604 18.8999 5.93604ZM9.61572 17.2096C11.2736 17.2096 12.5999 18.5359 12.5999 20.1938C12.5999 21.8517 11.2736 23.178 9.61572 23.178C7.95784 23.178 6.63153 21.8517 6.63153 20.1938C6.69785 18.5359 8.02415 17.2096 9.61572 17.2096ZM18.8999 23.178C17.242 23.178 15.9157 21.8517 15.9157 20.1938C15.9157 18.5359 17.242 17.2096 18.8999 17.2096C20.5578 17.2096 21.8841 18.5359 21.8841 20.1938C21.8841 21.8517 20.5578 23.178 18.8999 23.178ZM28.184 23.178C26.5261 23.178 25.1998 21.8517 25.1998 20.1938C25.1998 18.5359 26.5261 17.2096 28.184 17.2096C29.8419 17.2096 31.1682 18.5359 31.1682 20.1938C31.1682 21.8517 29.7756 23.178 28.184 23.178Z" fill="white" />
-                      </svg></span> обращаются с запросами по абсолютно разным темам</h2>
-                        <div class="swiper swiper-topics">
-                            <div class="swiper-btns">
-                                <div class="sw-button-prev">
-                                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="49" height="49" rx="10" transform="matrix(-1 0 0 1 50 1)" fill="white" stroke="white" />
-                                        <path d="M25.3672 21L21.7354 24.6318L25.3672 28.2637" stroke="#335D98" />
-                                      </svg>
-                                </div>
-                                <div class="sw-button-next">
-                                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="1" y="1" width="49" height="49" rx="10" fill="white" stroke="white" />
-                                        <path d="M25.6328 21L29.2646 24.6318L25.6328 28.2637" stroke="#335D98" />
-                                      </svg>
-                                </div>
-                            </div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <span class="topic">Отношения с детьми</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <span class="topic">Хочу стать психологом</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <span class="topic">Самореализация</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <span class="topic">Любовь к себе</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <span class="topic">Отношения с детьми</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <span class="topic">Хочу стать психологом</span>
-                                </div>
-                            </div>
-                        </div>
-                </section>
-                <section class="areas-study">
-                    <div class="areas-study__title">
-                        <h2>Направления обучения</h2>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
-                <img class="ellipse" src="images/ellipse.svg" alt="image">
-                <div class="footer-top d-flex">
-                    <div class="support-message">
-                        <h2>Остались<br> вопросы? Задайте специалисту! <span class="answer">Отвечаем в рабочее время с понедельника по воскресенье<br> 8:00-21:00 по Москве</span></h2>
-                    </div>
-                    <div class="feedback-form">
-                        <form action="/submit" method="POST">
-                            <div class="input-wrapper">
-                                <label for="name" class="label-name">Имя</label>
-                                <input type="text" id="name" placeholder="Никита Поляков" name="name" required>
-                            </div>
-                            <div class="input-wrapper">
-                                <label for="phone" class="label-phone">+ 7( <svg width="24" height="6" viewBox="0 0 24 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g opacity="0.2">
-                                      <circle cx="3" cy="3" r="3" fill="white" />
-                                      <circle cx="12" cy="3" r="3" fill="white" />
-                                      <circle cx="21" cy="3" r="3" fill="white" />
-                                    </g>
-                                  </svg> ) <svg width="51" height="6" viewBox="0 0 51 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g opacity="0.2">
-                                      <circle cx="3" cy="3" r="3" fill="white" />
-                                      <circle cx="12" cy="3" r="3" fill="white" />
-                                      <circle cx="21" cy="3" r="3" fill="white" />
-                                      <circle cx="30" cy="3" r="3" fill="white" />
-                                      <circle cx="39" cy="3" r="3" fill="white" />
-                                      <circle cx="48" cy="3" r="3" fill="white" />
-                                    </g>
-                                  </svg></label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            <div class="input-wrapper">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="input-wrapper">
-                                <label for="message">Текст вопроса</label>
-                                <textarea id="message" name="message" rows="4" required></textarea>
-                            </div>
-                            <div class="form-bottom d-flex">
-                            <button class="question-btn btn-reset">Задать вопрос 
-                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="8.5" cy="8.5" r="8.5" fill="#507564" />
-                                    <path d="M7.814 5H9.242V7.828H12.056V9.256H9.242V12.084H7.814V9.256H5V7.828H7.814V5Z" fill="white" />
-                                  </svg></button>
-                            <div class="consent-checkbox">
-                                <label>
-                                    <input type="checkbox" id="consent" name="consent" required>
-                                    Согласен на обработку моих персональных данных в соответствии с Политикой в отношении обработки     персональных данных
-                                </label>
-                            </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-wrapper d-flex">
-                    <div class="footer-menu d-flex">
-                        <ul class="list-reset footer-menu__list">
-                            <li class="top-item menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Институт</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Лицензия и документы</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Вопрос-ответ</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Эксперты-практики</span>
-                                </a>
-                            </li>
-                            <li class="menu__item bottom-item">
-                                <ul class="list-reset footer-menu__list">
-                                    <li class="menu__item">
-                                        <a href="/#" class="menu__link">
-                                        <span>Министерство науки и высшего образования РФ</span>
-                                        </a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="/#" class="menu__link">
-                                            <span>Министерство просвещения РФ</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="list-reset footer-menu__list">
-                            <li class="top-item menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Дистанционное обучение</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Архитектура и строительство</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Лицензия и документы</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Вопрос-ответ</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Эксперты-практики</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="list-reset footer-menu__list">
-                            <li class="top-item menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Виды программ</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Лицензия и документы</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Вопрос-ответ</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Эксперты-практики</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="list-reset footer-menu__list">
-                            <li class="top-item menu__item">
-                                <a href="/#" class="menu__link">
-                                    <span>Карта сайта</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="contacts-info">
-                        <span>Контакты</span>   
-                        <a class="e-mail" href="mailto:Oilanuniversity@gmail.com">Oilanuniversity@gmail.com</a>
-                        <a href="tel:88001112233">8 (800) 111-22-33</a>
-                        <address>454090, Челябинская обл., Челябинский г.о., Советский вн.р-н, г. Челябинск, пр-кт Ленина, д. 21В, нежилое помещение 11</address>
-                    </div>
-                </div>
-                <div class="footer-bottom d-flex">
-                    <span>© 2023 - 2024 Oilan University</span>
-                    <a class="footer-bottom__link" href="/#">
-                        Политика в отношении обработки персональных данных
-                    </a>
-                    <a class="footer-bottom__link" href="/#">
-                        Пользовательское соглашение
-                    </a>
-                    <a class="footer-logo" href="/#">
-                        <img src="images/footer-logo.svg" alt="Oilan university Logo" width="501" height="209">
-                    </a>
-                </div>
-            </footer>
-        </div>
+        </header>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>

@@ -5,6 +5,31 @@ var swiper = new Swiper(".swiper-banners", {
       },
 });
 
+var swiper = new Swiper('.swiper-news', {
+  slidesPerView: '6',
+  spaceBetween: 8,
+  mousewheel: true,  
+  freeMode: true,
+  breakpoints: {
+    1324: {
+      slidesPerView: 6,
+    },
+    768: {
+      slidesPerView: 5.3,
+    },
+    600:{
+      slidesPerView: 2.3,
+    },
+    320: {
+      slidesPerView: 1.3,
+    },
+  },
+  scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+  },
+});
+
 $(document).ready(function () {
     const swiperContainer = document.querySelector('.swiper-banners');
 

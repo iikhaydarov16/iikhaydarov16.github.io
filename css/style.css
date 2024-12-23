@@ -747,6 +747,7 @@ textarea:focus {
 }
 
 .map {
+    position: relative;
     width: 100%;
     height: 750px;
     padding: 0;
@@ -755,6 +756,69 @@ textarea:focus {
 
 [class*="copyrights-pane"] {
     display: none !important;
+}
+
+.map .overlay-block{
+    position: absolute;
+    bottom: 48px;
+    left: 48px;
+    z-index: 10;
+}
+
+.overlay-block .overlay-block__items{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.overlay-block__items .overlay-block__item{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 10px 16px 10px 12px;
+}
+
+.balloon{
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 130%;
+    color: #303030;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.balloon .ballon-icon{
+    margin-bottom: 10px;
+}
+  
+.balloon .ballon-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.ymaps-2-1-79-balloon{
+    box-shadow: none !important;
+}
+
+.ymaps-2-1-79-balloon__layout{
+    border-radius: 12px;
+    border: none;
+}
+
+.ymaps-2-1-79-balloon__close-button{
+    display: none !important;
+}
+
+.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content{
+    margin-right: 12px !important;
+}
+
+.ymaps-2-1-79-balloon__content > ymaps {
+    max-width: 202px;
+    height: auto !important;
 }
   
 .contacts-wrapper{

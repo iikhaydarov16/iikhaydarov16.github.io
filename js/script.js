@@ -94,47 +94,6 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function() {
-    var currentVideo = null;
-  
-    $('.play-btn').click(function() {
-      var video = $(this).siblings('.video')[0];
-  
-      if (currentVideo && currentVideo !== video) {
-        $(currentVideo).attr('poster', $(currentVideo).data('poster'));
-  
-        var source = $(currentVideo).find('source').attr('src');
-        currentVideo.load();
-        $(currentVideo).find('source').attr('src', source);
-  
-        currentVideo.pause();
-        currentVideo.currentTime = 0;
-        $(currentVideo).removeAttr('controls');
-        $(currentVideo).siblings('.play-btn').show();
-      }
-  
-      $(this).hide();
-      video.play();
-      video.controls = true;
-  
-      currentVideo = video;
-    });
-  
-    $('.video').on('pause ended', function() {
-      var video = this;
-      
-      $(video).attr('poster', $(video).data('poster'));
-  
-      var source = $(video).find('source').attr('src');
-      video.load();
-      $(video).find('source').attr('src', source);
-      video.pause();
-  
-      $(video).removeAttr('controls');
-      $(video).siblings('.play-btn').show();
-  });
-});
-
 if (typeof ymaps !== "undefined") {
   ymaps.ready(function () {
     let defaultCenter = [55.760160, 37.608244];
@@ -156,20 +115,30 @@ if (typeof ymaps !== "undefined") {
           zoom: 5,
         });
 
-        let addresses = document.querySelectorAll('.address');
-        
-        addresses.forEach(function(addressElement) {
-          let address = addressElement.getAttribute('data-address');
+        let addresses = document.querySelectorAll(".branche-address, .representation-address");
 
-          ymaps.geocode(address).then(function(res) {
+        addresses.forEach(function (addressElement) {
+          let address = addressElement.getAttribute("data-address");
+          let isRepresentation = addressElement.classList.contains("representation-address");
+
+          ymaps.geocode(address).then(function (res) {
             let coordinates = res.geoObjects.get(0).geometry.getCoordinates();
 
-            let placemark = new ymaps.Placemark(coordinates, {}, {
-              iconLayout: "default#image",
-              iconImageHref: "/wp-content/themes/oilan/assets/images/placemark.svg",
-              iconImageSize: [40, 40],
-              iconImageOffset: [-19, -44],
-            });
+            let placemark = new ymaps.Placemark(
+              coordinates,
+              {
+                balloonContent: `<div class="balloon">
+                <div class="ballon-icon"><img src="${isRepresentation ? "/img/gray-icon.svg" : "/img/green-icon.svg"}" alt="icon"></div>
+                <div class="balloon-text">${address}</div>
+                </div>`,
+              },
+              {
+                iconLayout: "default#image",
+                iconImageHref: isRepresentation ? "/img/location-gray.svg" : "/img/location-green.svg",
+                iconImageSize: [40, 40],
+                iconImageOffset: [-19, -44],
+              }
+            );
 
             map.geoObjects.add(placemark);
           });
@@ -183,9 +152,9 @@ if (typeof ymaps !== "undefined") {
         map.controls.remove("zoomControl");
         map.controls.remove("rulerControl");
 
-        window.addEventListener('resize', function() {
-          let newCenter = (window.innerWidth < 768) ? mobileCenter : defaultCenter;
-          
+        window.addEventListener("resize", function () {
+          let newCenter = window.innerWidth < 768 ? mobileCenter : defaultCenter;
+
           if (map.getCenter().toString() !== newCenter.toString()) {
             map.setCenter(newCenter);
           }
@@ -196,3 +165,4 @@ if (typeof ymaps !== "undefined") {
     init();
   });
 }
+

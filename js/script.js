@@ -166,3 +166,37 @@ if (typeof ymaps !== "undefined") {
   });
 }
 
+$(document).ready(function() {
+  const $feedbackBtn = $(".feedback-btn");
+  const $modalOverlay = $(".modal-overlay");
+  const $closeBtn = $(".closeModal");
+
+  $feedbackBtn.on("click", function() {
+    $modalOverlay.css("display", "flex").hide().fadeIn();
+    $("body").css("overflow", "hidden");
+  });
+
+  $closeBtn.on("click", function() {
+    $modalOverlay.fadeOut(function() {
+      $modalOverlay.css("display", "none");
+    });
+    $("body").css("overflow", "");
+  });
+
+  $modalOverlay.on("click", function(e) {
+    if ($(e.target).is($modalOverlay)) {
+      $modalOverlay.fadeOut(function() {
+        $modalOverlay.css("display", "none");
+      });
+      $("body").css("overflow", "");
+    }
+  });
+});
+
+function initInputMask() {
+  $(document).ready(function($) {
+      $("input[type='tel']").inputmask("+7 (999) 9999999");
+  });
+}
+
+initInputMask();

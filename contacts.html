@@ -14,7 +14,7 @@
         <header class="header">
             <div class="header-left">
                 <div class="logo">
-                    <img src="img/main-logo.svg" alt="">
+                    <a href="/"><img src="img/main-logo.svg" alt=""></a>
                 </div>
                 <button class="catalog-btn btn-reset">
                     <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -360,9 +360,29 @@
         </div>
     </footer>
     </div>
+    <div class="modal-overlay">
+        <div class="modal-feedback">
+            <div class="modal-feedback__title">
+                Заполните форму заявки чтобы заказать звонок
+            </div>
+            <form class="feedback-form" action="">
+                <input class="input-wrapper" aria-invalid="false" placeholder="Фамилия и Имя*" value="" type="text" name="feedback-name">
+                <input class="input-wrapper" aria-invalid="false" placeholder="Телефон*" value="" type="tel" name="feedback-phone">
+                <input class="input-wrapper" aria-invalid="false" placeholder="Email" value="" type="text" name="feedback-email">
+                <textarea class="textarea-wrapper" name="feedback-text" placeholder="Комментарий"></textarea>
+                <div class="feedback-form__text">
+                    <p>*Обязательно для заполнения</p>
+                    <p>Нажимая кнопку «Отправить заявку» Вы соглашаетесь на обработку предоставленных вами персональных данных.</p>
+                </div>
+                <input type="submit" class="submit-btn" value="Оформить заявку на звонок">
+            </form>
+            <button class="btn-reset closeModal"></button>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=47754581-718a-43d6-a330-6a5325583d00"></script>
-    <script src="/js/jquery.min.js"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

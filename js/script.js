@@ -141,7 +141,7 @@ $(document).ready(function() {
 if (typeof ymaps !== "undefined") {
   ymaps.ready(function () {
     let defaultCenter = [55.760160, 37.608244];
-    let mobileCenter = [55.16043706952579, 61.4262959999999];
+    let mobileCenter = [55.755864, 37.617698];
     let center = defaultCenter;
 
     function init() {

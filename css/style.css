@@ -752,6 +752,13 @@ textarea:focus {
     gap: 5px;
 }
 
+.footer-right .phones a{
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(48, 48, 48, 0.56);
+}
+
 .footer-right .social-links{
     display: flex;
     gap: 8px;
@@ -810,6 +817,14 @@ textarea:focus {
     border-radius: 12px;
     background: #ffffff;
     padding: 10px 16px 10px 12px;
+}
+
+.overlay-block__item span{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    color: #303030;
 }
 
 .balloon{
@@ -897,7 +912,6 @@ textarea:focus {
 
 .branches-item{
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
     border: 1px solid #eaeff2;
@@ -908,9 +922,9 @@ textarea:focus {
 
 .branches-item__left{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
+    flex: 1;
 }
 
 .branches-item__left .branche-address{
@@ -923,31 +937,50 @@ textarea:focus {
 
 .branches-item__right{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
 }
 
-.branches-item__right .branche-email a{
+.brances-wrapper{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.branches-item__right .branche-emails{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
+}
+
+.branches-item__right .branche-emails a{
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 130%;
     text-align: right;
     color: rgba(48, 48, 48, 0.64);
+    white-space: nowrap;
 }
 
-.branches-item__right .branche-phone a{
+.branches-item__right .branche-phones{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+ }
+
+.branches-item__right .branche-phones a{
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 130%;
     color: rgba(48, 48, 48, 0.64);
+    white-space: nowrap;
 }
 
 .branches-item__right .feedback-btn{
     border-radius: 6px;
-    padding: 16px;
     background: #303030;
     font-family: var(--font-family);
     font-weight: 600;
@@ -955,6 +988,8 @@ textarea:focus {
     letter-spacing: 0.01em;
     color: #ffffff;
     margin-left: 8px;
+    width: 219px;
+    height: 36px;
 }
 
 .representations{
@@ -990,9 +1025,9 @@ textarea:focus {
 
 .representations-item__left{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
+    flex: 1;
 }
 
 .representations-item__left .representation-address{
@@ -1005,12 +1040,24 @@ textarea:focus {
 
 .representations-item__right{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
 }
 
-.representations-item__right .representation-email a{
+.representations-wrapper {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.representations-item__right .representation-emails{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.representations-item__right .representation-emails a{
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 14px;
@@ -1019,7 +1066,13 @@ textarea:focus {
     color: rgba(48, 48, 48, 0.64);
 }
 
-.representations-item__right .representation-phone a{
+.representations-item__right .representation-phones{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.representations-item__right .representation-phones a{
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 14px;
@@ -1029,7 +1082,6 @@ textarea:focus {
 
 .representations-item__right .feedback-btn{
     border-radius: 6px;
-    padding: 16px;
     background: #303030;
     font-family: var(--font-family);
     font-weight: 600;
@@ -1037,8 +1089,9 @@ textarea:focus {
     letter-spacing: 0.01em;
     color: #ffffff;
     margin-left: 8px;
+    width: 219px;
+    height: 36px;
 }
-
 
 .modal-overlay {
     position: fixed;
@@ -1348,6 +1401,10 @@ textarea:focus {
     .special-offer__wrapper .offer-subtitle{
         font-size: calc(14px + 12*((100vw - 480px) / 1330));
     }
+    .contacts-wrapper .contacts-title,
+    .contacts-wrapper .contacts-subtitle{
+        font-size: calc(18px + 42*((100vw - 480px) / 1330));
+    }
     .product-attributes .attribute{
         font-size: 15px;
     }
@@ -1358,6 +1415,18 @@ textarea:focus {
     .footer-top .footer-logo {
         width: 157px;
         height: auto;
+    }
+    .branches-item__right .branche-emails{
+        flex-direction: column;
+    }
+    .branches-item__right .branche-phones{
+        flex-direction: column;
+    }
+    .representations-item__right .representation-emails{
+        flex-direction: column;
+    }
+    .representations-item__right .representation-phones{
+        flex-direction: column;
     }
 }
 
@@ -1389,6 +1458,10 @@ textarea:focus {
     .special-offer__wrapper .offer-subtitle{
         font-size: calc(12px + 10*((100vw - 480px) / 1024));
         max-width: 350px;
+    }
+    .contacts-wrapper .contacts-title,
+    .contacts-wrapper .contacts-subtitle{
+        font-size: calc(18px + 38*((100vw - 480px) / 1024));
     }
     .main-catalog{
         margin: 98px 36px;
@@ -1434,7 +1507,7 @@ textarea:focus {
         margin-top: 68px;
     }
     .footer-top .footer-left{
-        gap: 60px;
+        gap: 40px;
     }
     .footer-left .footer-nav{
         width: 100%;
@@ -1459,6 +1532,48 @@ textarea:focus {
     }
     .special-offer__wrapper .feedback-btn{
         margin-top: 78px;
+    }
+    .special-offer__wrapper .feedback-btn{
+        padding: 15px;
+        font-size: 14px;
+    }
+    .map {
+        height: 550px;
+    }
+    .map .overlay-block{
+        bottom: 24px;
+        left: 24px;
+    }
+    .contacts-wrapper {
+        margin: 98px 36px;
+    }
+    .branches-item{
+        flex-direction: column;
+    }
+    .branches-item__right .branche-emails {
+        flex-direction: row;
+    }
+    .branches-item__right .branche-phones {
+        flex-direction: row;
+    }
+    .branches-item__right{
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .representations-item{
+        flex-direction: column;
+    }
+    .representations-item__right .representation-emails {
+        flex-direction: row;
+    }
+    .representations-item__right .representation-phones {
+        flex-direction: row;
+    }
+    .representations-item__right{
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
     }
 }
 
@@ -1526,6 +1641,10 @@ textarea:focus {
         font-size: 16px;
         max-width: 295px;
     }
+    .contacts-wrapper .contacts-title,
+    .contacts-wrapper .contacts-subtitle{
+        font-size: 24px;
+    }
     .special-offer__wrapper img {
         width: 300px;
     }
@@ -1560,7 +1679,7 @@ textarea:focus {
         margin-top: 36px;
     }
     .footer-top .footer-left {
-        gap: 60px;
+        gap: 20px;
     }
     .footer-top{
         padding: 24px; 
@@ -1573,6 +1692,33 @@ textarea:focus {
     }
     .footer-top .footer-logo{
         width: 70px;
+    }
+    .footer-right {
+        right: 24px;
+    }
+    .map {
+        height: 450px;
+    }
+    .map .overlay-block{
+        bottom: 12px;
+        left: 12px;
+    }
+    .contacts-wrapper {
+        margin: 36px 16px;
+    }
+    .branches{
+        margin-top: 26px;
+    }
+    .representations {
+        margin-top: 24px;
+    }
+    .branches-item,
+    .representations-item{
+        padding: 14px;
+    }
+    .representations .representations-title,
+    .branches .branches-title{
+        font-size: 18px;
     }
 }
 
@@ -1613,6 +1759,10 @@ textarea:focus {
     .special-offer__wrapper {
         min-height: 300px;
     }
+    .contacts-wrapper .contacts-title,
+    .contacts-wrapper .contacts-subtitle{
+        font-size: 22px;
+    }
     .product-items .product-item {
         max-width: 100%;
     }
@@ -1649,9 +1799,10 @@ textarea:focus {
     .news-tabs .tab-content {
         margin-top: 12px;
     }
-
-    .footer-top .footer-left {
-        gap: 20px;
+    .footer-left .footer-nav{
+        gap: 73px;
     }
-
+    .footer-bottom {
+        margin: 36px 24px 0;
+    }
 }

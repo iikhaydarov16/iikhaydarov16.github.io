@@ -108,23 +108,24 @@ textarea:focus {
     max-width: var(--container-width);
 }
 
-.header{
+.header-wrapper{
     display: flex;
     justify-content: space-between;
     padding: 24px 48px;
 }
 
-.header .header-left{
+.header-wrapper .header-left{
     display: flex;
     align-items: center;
 }
 
-.header-left .logo{
+.header .logo img{
     width: 83px;
     height: 52px;
+    max-width: fit-content;
 }
 
-.header-left .catalog-btn{
+.header .catalog-btn{
     display: flex;
     gap: 6px;
     align-items: center;
@@ -140,7 +141,7 @@ textarea:focus {
     margin-left: 29.9px;
 }
 
-.header-left .search-form{
+.header .search-form{
     display: flex;
     gap: 4px;
     align-items: center;
@@ -167,7 +168,7 @@ textarea:focus {
     color: #303030;
 }
 
-.header-left .header__nav{
+.header .header__nav{
     margin-left: 32.5px;
 }
 
@@ -183,15 +184,36 @@ textarea:focus {
     color: #303030;
 }
 
-.header .header-right{
+.header-wrapper .header-right{
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.header-right .social-networks{
+.header .social-networks{
     display: flex;
     gap: 8px;
+    margin-top: 6px;
+}
+
+.header .basket{
+    border: 1px solid #eaeff2;
+    border-radius: 6px;
+    width: 113px;
+    height: 36px;
+}
+
+.header .basket a{
+    display: flex;
+    gap: 6px;
+    padding: 10px 16px;
+}
+
+.basket a span{
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 13px;
+    color: #303030;
 }
 
 .swiper-banners .swiper-pagination-bullet{
@@ -341,6 +363,7 @@ textarea:focus {
     line-height: 100%;
     color: #303030;
     max-width: 262px;
+    z-index: 1;
  }
 
 .product-item .see-more{
@@ -352,6 +375,7 @@ textarea:focus {
     font-size: 12px;
     letter-spacing: 0.01em;
     color: rgba(48, 48, 48, 0.64);
+    z-index: 1;
 }
 
 .product-item .bg-img{
@@ -436,10 +460,11 @@ textarea:focus {
     position: absolute;
     bottom: 25px;
     left: 24px;
+    right: 24px;
     max-width: 350px;
     font-size: 16px;
     letter-spacing: 0.01em;
-    color: #ffffff
+    color: #ffffff;
 }
 
 .advantages-item .play-btn{
@@ -483,6 +508,7 @@ textarea:focus {
 }
 
 .special-offer__wrapper .offer-top{
+    position: relative;
     width: fit-content;
     border-radius: 53px;
     padding: 10px 14px;
@@ -491,9 +517,11 @@ textarea:focus {
     font-size: 16px;
     letter-spacing: 0.01em;
     color: #303030;
+    z-index: 2;
 }
 
 .special-offer__wrapper .offer-title{
+    position: relative;
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 48px;
@@ -502,24 +530,29 @@ textarea:focus {
     color: #303030;
     padding: 25px 1.5px 24px;
     max-width: 405px;
+    z-index: 2;
 }
 
 .special-offer__wrapper .offer-subtitle{
+    position: relative;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 0.01em;
     color: rgba(48, 48, 48, 0.64);
     max-width: 413px;
+    z-index: 2;
 }
 
 .special-offer__wrapper img{
     position: absolute;
     bottom: 0;
     right: 98px;
+    z-index: 1;
 }
 
 .special-offer__wrapper .feedback-btn{
+    position: relative;
     border-radius: 10px;
     padding: 14px 16px;
     background: #a2ca00;
@@ -529,6 +562,7 @@ textarea:focus {
     letter-spacing: 0.01em;
     color: #ffffff;
     margin-top: 78px;
+    z-index: 2;
 }
 
 .main-news{
@@ -548,6 +582,7 @@ textarea:focus {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    margin-top: 24px;
 }
 
 .tab-nav .tab-btn{
@@ -559,7 +594,6 @@ textarea:focus {
     font-size: 12px;
     letter-spacing: 0.01em;
     color: #303030;
-    margin-top: 24px;
 }
 
 .tab-nav .tab-btn.tab-btn-active{
@@ -658,20 +692,18 @@ textarea:focus {
 }
 
 .footer-top{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 48px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .footer-top .footer-logo{
     width: 217px;
     height: 110px; 
-}
-
-.footer-top{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
 .footer-top .footer-left{
@@ -1158,4 +1190,468 @@ textarea:focus {
   
 .closeModal::after {
     transform: rotate(-45deg);
+}
+
+.header-wrapper .menu-btn{
+    width: 49px;
+    height: 49px;
+    position: relative;
+    display: none;
+    background: #a2ca00;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+}
+
+.menu-btn__burger {
+    width: 19px;
+    height: 3px;
+    background: #ffffff;
+    transition: all .2s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 3px;
+    background: #ffffff;
+    transition: all .2s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-5px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(5px);
+}
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.header .mobile-menu{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+.mobile-menu.show {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 1;
+    gap: 20px;
+}
+
+.mobile-menu .catalog-btn{
+    display: none;
+}
+  
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#00000070;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+  
+.overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1440px){
+    .product-items .product-item{
+        max-width: 32%;
+    }
+    .why-choose .advantages-item{
+        max-width: 32%;
+    }
+}
+
+@media screen and (max-width: 1330px){
+    .header {
+        position: fixed;
+        background: #ffffff;
+        padding: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    .main{
+        padding-top: 100px;
+    }
+    .header-left .header__nav{
+        display: none;
+    }
+    .header-right .social-networks,
+    .header-right .basket{
+        display: none;
+    }
+    .header-right .menu-btn{
+        display: flex;
+    }
+    .header-wrapper{
+        gap: 20px;
+    }
+    .header-wrapper .header-left{
+        flex: 1;
+        gap: 15px;
+    }
+    .header .search-form{
+        margin-left: 0;
+        width: 100%;
+    }
+    .header .catalog-btn{
+        margin-left: 0;
+    }
+    .mobile-menu{
+        padding: 0 48px 24px;
+    }
+    .header .header__nav{
+        margin-left: 0;
+    }
+    .btns-wrapper{
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+    .banner-title__wrapper .banner-title{
+        font-size: calc(18px + 42*((100vw - 480px) / 1330));
+        max-width: 530px;
+    }
+    .banner-title__wrapper .banner-subtitle{
+        font-size: calc(14px + 12*((100vw - 480px) / 1330));
+    }
+    .special-offer__wrapper .offer-title{
+        font-size: calc(18px + 42*((100vw - 480px) / 1330));
+        max-width: 530px;
+    }
+    .special-offer__wrapper .offer-subtitle{
+        font-size: calc(14px + 12*((100vw - 480px) / 1330));
+    }
+    .product-attributes .attribute{
+        font-size: 15px;
+    }
+    .special-offer__wrapper img{
+        right: 30px;
+        width: 500px;
+    }
+    .footer-top .footer-logo {
+        width: 157px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .swiper-banners .product-attributes{
+        top: 36px;
+        left: 24px;
+    }
+    .swiper-banners .banner-title__wrapper{
+        top: 100px;
+        left: 24px;
+    }
+    .swiper-banners .feedback-btn{
+        bottom: 37px;
+        left: 26px;
+    }
+    .banner-title__wrapper .banner-title{
+        font-size: calc(18px + 38*((100vw - 480px) / 1024));
+        max-width: 430px;
+    }
+    .banner-title__wrapper .banner-subtitle{
+        font-size: calc(12px + 10*((100vw - 480px) / 1024));
+        max-width: 350px;
+    }
+    .special-offer__wrapper .offer-title{
+        font-size: calc(18px + 38*((100vw - 480px) / 1024));
+        max-width: 430px;
+    }
+    .special-offer__wrapper .offer-subtitle{
+        font-size: calc(12px + 10*((100vw - 480px) / 1024));
+        max-width: 350px;
+    }
+    .main-catalog{
+        margin: 98px 36px;
+    }
+    .main-catalog .main-catalog__title{
+        font-size: 24px;
+    }
+    .why-choose {
+        margin: 98px 36px;
+    }
+    .why-choose .why-choose__title{
+        font-size: 24px;
+    }
+    .special-offer {
+        margin: 98px 36px;
+    }
+    .special-offer__title{
+        font-size: 24px;
+    }
+    .main-news { 
+        margin: 98px 36px;
+    }
+    .swiper-banners .feedback-btn{
+        padding: 15px;
+        font-size: 14px;
+    }
+    .swiper-banners .swiper-pagination-bullets{
+        bottom: var(--swiper-pagination-bottom, 36px);
+    }
+    .product-items .product-item{
+        max-width: 49%;
+    }
+    .why-choose .advantages-item{
+        max-width: 49%;
+    }
+    .advantages-item .advantage-text{
+        font-size: 24px;
+    }
+    .special-offer__wrapper .offer-top{
+        font-size: 15px;
+    }
+    .footer {
+        margin-top: 68px;
+    }
+    .footer-top .footer-left{
+        gap: 60px;
+    }
+    .footer-left .footer-nav{
+        width: 100%;
+    }
+    .footer-right{
+        position: absolute;
+        right: 48px;
+    }
+    .footer-bottom{
+        margin: 118px 48px 0;
+    }
+    .special-offer__wrapper{
+        padding: 18px;
+    }
+    .advantages-item .advantages-item__title{
+        top: 18px;
+        left: 18px; 
+    }
+    .advantages-item .advantages-item__subtitle{
+        bottom: 18px;
+        left: 18px; 
+    }
+    .special-offer__wrapper .feedback-btn{
+        margin-top: 78px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header-wrapper{
+        padding: 12px 24px;
+    }
+    .header-left .catalog-btn{
+        display: none;
+    }
+    .header-wrapper .menu-btn{
+        width: 39px;
+        height: 39px;
+    }
+    .mobile-menu.show{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 24px;
+    }
+    .mobile-menu .catalog-btn{
+        display: flex;
+    }
+    .header__nav .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header .logo img{
+        width: 73px;
+        height: 42px;
+    }
+    .main {
+        padding-top: 73px;
+    }
+    .main-catalog .main-catalog__title {
+        font-size: 22px;
+    }
+    .product-attributes .attribute {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+    .swiper-banners .swiper-slide{
+        height: 400px;
+    }
+    .swiper-banners .swiper-slide img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .banner-title__wrapper .banner-title{
+        font-size: 24px;
+        max-width: 300px;
+    }
+    .banner-title__wrapper .banner-subtitle{
+        font-size: 16px;
+        max-width: 295px;
+    }
+    .special-offer__wrapper{
+        min-height: 335px;
+    }
+    .special-offer__wrapper .offer-title{
+        font-size: 24px;
+        max-width: 300px;
+    }
+    .special-offer__wrapper .offer-subtitle{
+        font-size: 16px;
+        max-width: 295px;
+    }
+    .special-offer__wrapper img {
+        width: 300px;
+    }
+    .special-offer__wrapper .feedback-btn{
+        margin-top: 55px;
+    }
+    .why-choose .why-choose__title {
+        font-size: 22px;
+    }
+    .special-offer__title {
+        font-size: 22px;
+    }
+    .advantages-item .advantage-text{
+        font-size: 22px;
+    }
+    .advantages-item .advantages-item__title{
+        font-size: 35px;
+    }
+    .main-catalog {
+        margin: 36px 16px;
+    }
+    .why-choose {
+        margin: 36px 16px;
+    }
+    .special-offer {
+        margin: 36px 16px;
+    }
+    .main-news {
+        margin: 36px 16px;
+    }
+    .footer {
+        margin-top: 36px;
+    }
+    .footer-top .footer-left {
+        gap: 60px;
+    }
+    .footer-top{
+        padding: 24px; 
+    }
+    .footer-bottom{
+        margin: 68px 24px 0;
+    }
+    .footer-bottom__right{
+        gap: 20px;  
+    }
+    .footer-top .footer-logo{
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .swiper-banners .product-attributes {
+        top: 26px;
+        left: 12px;
+        gap: 4px;
+    }
+    .swiper-banners .banner-title__wrapper {
+        left: 12px;
+    }
+    .swiper-banners .swiper-pagination-bullets {
+        bottom: var(--swiper-pagination-bottom, 16px);
+    }
+    .swiper-banners .feedback-btn {
+        left: 12px;
+    }
+    .banner-title__wrapper .banner-title{
+        font-size: 22px;
+        max-width: 300px;
+    }
+    .banner-title__wrapper .banner-subtitle{
+        font-size: 15px;
+        max-width: 295px;
+    }
+    .special-offer__wrapper .offer-title{
+        font-size: 22px;
+        max-width: 300px;
+    }
+    .special-offer__wrapper .offer-subtitle{
+        font-size: 15px;
+        max-width: 295px;
+    }
+    .special-offer__wrapper .offer-top{
+        font-size: 10px;
+    }
+    .special-offer__wrapper {
+        min-height: 300px;
+    }
+    .product-items .product-item {
+        max-width: 100%;
+    }
+    .main-catalog {
+        margin: 16px 8px;
+    }
+    .main-catalog .product-items{
+        margin-top: 12px;
+    }
+    .why-choose {
+        margin: 16px 8px;
+    }
+    .why-choose .advantages-items{
+        margin-top: 12px;
+    }
+    .why-choose .advantages-item {
+        max-width: 100%;
+    }
+    .special-offer {
+        margin: 16px 8px;
+    }
+    .special-offer__wrapper {
+        margin-top: 12px;
+    }
+    .special-offer__wrapper img {
+        width: 200px;
+    }
+    .main-news {
+        margin: 16px 8px;
+    }
+    .news-tabs .tab-nav{
+        margin-top: 12px;
+    }
+    .news-tabs .tab-content {
+        margin-top: 12px;
+    }
+
+    .footer-top .footer-left {
+        gap: 20px;
+    }
+
 }

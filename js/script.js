@@ -18,19 +18,23 @@ $(document).ready(function () {
         1324: {
           slidesPerView: 6,
         },
+        1024: {
+          slidesPerView: 4.5,
+        },
         768: {
-          slidesPerView: 5.3,
+          slidesPerView: 3.5,
         },
         600: {
-          slidesPerView: 2.3,
+          slidesPerView: 2.5,
         },
         320: {
-          slidesPerView: 1.3,
+          slidesPerView: 1.5,
         },
       },
       scrollbar: {
         el: '.swiper-scrollbar',
         hide: false,
+        draggable: true,
       },
     });
     swipers.push(swiper);
@@ -233,10 +237,44 @@ $(document).ready(function() {
   });
 });
 
-function initInputMask() {
-  $(document).ready(function($) {
-      $("input[type='tel']").inputmask("+7 (999) 9999999");
-  });
-}
+$(document).ready(function($) {
+  $("input[type='tel']").inputmask("+7 (999) 9999999");
+});
 
-initInputMask();
+
+$(document).ready(function() {
+  const menuBtn = $('.menu-btn');
+  let menuOpen = false;
+
+  menuBtn.click(function() {
+      if (!menuOpen) {
+          menuBtn.addClass('open');
+          menuOpen = true;
+      } else {
+          menuBtn.removeClass('open');
+          menuOpen = false;
+      }
+  });
+
+  const $menuBtn = $(".menu-btn");
+  const $mobileMenu = $(".mobile-menu");
+  const $overlay = $(".overlay");
+  const $header = $(".header");
+  
+  $menuBtn.on("click", function () {
+      $mobileMenu.toggleClass("show");
+  
+      $header.toggleClass("border-radius");
+  
+      $overlay.toggleClass("show");
+  });
+  
+  $overlay.on("click", function () {
+      $mobileMenu.removeClass("show");
+  
+      $header.removeClass("border-radius");
+  
+      $overlay.removeClass("show");
+  });
+});
+
